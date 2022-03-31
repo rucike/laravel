@@ -36,19 +36,19 @@
                 <td>{{ $books->author }}</td>
                 <td>{{ $books->release_date }}</td>
                 @if(Auth::user()->isAdmin())
-                <td> 
-                    <form action="{{ route('books.destroy',$books->id) }}" method="POST">
+                    <td> 
+                        <form action="{{ route('books.destroy',$books->id) }}" method="POST">
 
-                        <a class="btn btn-info" href="{{ route('books.show',$books->id) }}">Rodyti</a>
+                            <a class="btn btn-info" href="{{ route('books.show',$books->id) }}">Rodyti</a>
 
-                        <a class="btn btn-success" href="{{ route('books.edit', $books->id) }}">Redaguoti</a>
+                            <a class="btn btn-success" href="{{ route('books.edit', $books->id) }}">Redaguoti</a>
 
-                        @csrf
-                        @method('DELETE')
+                            @csrf
+                            @method('DELETE')
 
-                        <button type="submit" class="btn btn-outline-danger">Trinti</button>
-                    </form>
-                </td>
+                            <button type="submit" class="btn btn-outline-danger">Trinti</button>
+                        </form>
+                    </td>
                 @endif
             </tr>
             @endforeach

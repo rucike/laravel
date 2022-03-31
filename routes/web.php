@@ -28,3 +28,6 @@ require __DIR__.'/auth.php';
 
 //Route::get('mail', [MailController::class, 'plain_email']);
 Route::get('mail_html', [MailController::class, 'html_email'])->name('mail'); 
+
+Route::get('indexList', [BookController::class, 'index'])->middleware(['auth'])->name('indexList');
+Route::resource('/books', BookController::class)->middleware(['AdminAccess']);
