@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<div class="container">
+<div class="container shadow-lg" style="padding:1em;">
     @yield('content')
 </div>
 

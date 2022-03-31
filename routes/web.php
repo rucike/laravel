@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\MailController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,3 +25,6 @@ Route::get('/dashboard', function () {
 Route::resource('/books', BookController::class)->middleware(['auth']);
 
 require __DIR__.'/auth.php';
+
+//Route::get('mail', [MailController::class, 'plain_email']);
+Route::get('mail_html', [MailController::class, 'html_email'])->name('mail'); 
