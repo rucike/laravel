@@ -722,5 +722,8 @@
     "Book name": "Knygos pavadinimas",
     "Author": "Autorius",
     "Release date": "Išleidimo data",
-    "Books": "Knygos"
+    "Books": "Knygos",
+    "Files": "Failai",
+    "List": "Sąrašas",
+    "No files found": "Failų nerasta"
 }

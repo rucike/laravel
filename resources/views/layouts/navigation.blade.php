@@ -25,6 +25,14 @@
                             {{ __('Books') }}
                         </x-nav-link>
                     @endif
+                    @if(Auth::user()->isAdmin())
+                        <x-nav-link :href="route('create')">
+                            {{ __('Files') }}
+                        </x-nav-link>
+                    @endif
+                    <x-nav-link :href="route('list')" :active="request()->routeIs('list')">
+                        {{ __('List') }}
+                    </x-nav-link>
                 </div>
             </div>
 

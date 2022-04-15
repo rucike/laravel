@@ -13,8 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table){
-            $table->integer('isAdmin')->after('email')->default('0');
+        Schema::create('files', function (Blueprint $table) {
+            $table->id();
+            $table->string('filenames');
+            $table->string('filenames_orig');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('users', function(Blueprint $table){
-            $table->dropColumn('isAdmin');
-        });
+        Schema::dropIfExists('files');
     }
 };

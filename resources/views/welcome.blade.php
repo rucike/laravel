@@ -46,14 +46,13 @@
                 </div>
 
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                <div class="p-6 text-center" style="color:grey">
+                    <div class="p-6 text-center" style="color:grey">
                         <h2>Darbas su duomenimis</h2>
                     </div>
+                    <div class="text-center p-6"><a href="{{ url('/list') }}" style="color:grey">Pamatyti failų sąrašą</a></div>
                 </div>
 
                 <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                   
-
                     <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                     </div>
